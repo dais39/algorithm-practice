@@ -1,3 +1,5 @@
+package algorithm
+
 fun main(){
 
     val n = readLine()!!.toInt()

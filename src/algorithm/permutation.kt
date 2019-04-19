@@ -1,3 +1,5 @@
+package algorithm
+
 fun main() {
 
     val input = readLine()!!.split(" ").toMutableList()
@@ -15,7 +17,7 @@ fun calc(rest: MutableList<String>, perm: MutableList<String>) {
             val r = ArrayList(rest)
             p.add(rest[i])
             r.removeAt(i)
-            calc(r,p)
+            calc(r, p)
         }
     }
 }
