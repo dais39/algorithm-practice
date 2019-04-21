@@ -1,3 +1,4 @@
+// 動的計画法(DP)を利用する
 fun main(args: Array<String>) {
     val (n, qn) = readLine()!!.split(" ").map { it.toInt() }
     val s = readLine()!!

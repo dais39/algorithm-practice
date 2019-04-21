@@ -1,3 +1,4 @@
+// 入力値の最大値に注意する
 fun main(args: Array<String>) {
     // 入力値の最大値が10^15でInt(2^32)が使えないのでLong(2^64)で計算する
     val n = readLine()!!.toLong()
