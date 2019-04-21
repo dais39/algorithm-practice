@@ -3,8 +3,8 @@ fun main(args: Array<String>) {
     val l = tiles.length
 
     // 正解の型を作成する O(n)
-    var b = Array(l){'0'}
-    var w = Array(l){'1'}
+    var b = arrayOfNulls<Char>(l)
+    var w = arrayOfNulls<Char>(l)
     for (i in 0 until l){
         if(i % 2 == 0){
             b[i] = '0'
