@@ -1,5 +1,3 @@
-package atcoder
-
 fun main(args: Array<String>) {
     val foods = (1..5).map { readLine()!!.toInt() }.toIntArray()
 
