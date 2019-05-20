@@ -4,16 +4,20 @@ fun main(args: Array<String>) {
 
     val (l, r) = s.chunked(2).map { it.toInt() }
 
-    if (l in (1..12)) {
-        if(r in (1..12)){
+    val yymm = r in (1..12)
+    val mmyy = l in (1..12)
+
+    if (yymm) {
+        if(mmyy){
             println("AMBIGUOUS")
         }else{
-            println("NA")
+            println("YYMM")
         }
     } else {
-        when (r) {
-            in (1..12) -> println("YYMM")
-            else -> println("NA")
+        if(mmyy){
+            println("MMYY")
+        }else{
+            println("NA")
         }
     }
 }
