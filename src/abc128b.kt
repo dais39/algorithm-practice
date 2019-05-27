@@ -14,4 +14,7 @@ fun main(args: Array<String>) {
             println(it.first)
         }
     }
+
+    // AtCoderのKotlin 1.0.0環境ではcompareByが動作しないが以下でもできる
+    rs.sortedWith(compareBy({it.second}, {it.third * -1})).forEach { println(it.first) }
 }
