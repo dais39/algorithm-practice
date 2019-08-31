@@ -1,4 +1,4 @@
-package pattern.greedy
+package pattern
 
 interface ImmutableStack<T> {
 
