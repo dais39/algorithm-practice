@@ -1,19 +1,39 @@
 package pattern
 
-import java.lang.UnsupportedOperationException
+interface ImmutableQueue<T> {
 
-class ImmutableQueue<T>(private val values: List<T> = emptyList()) {
+    fun queue(element: T): ImmutableQueue<T>
 
-    fun queue(element: T): ImmutableQueue<T>{
-        return ImmutableQueue(this.values + element)
+    fun dequeue(): ImmutableQueue<T>
+
+    fun getElements(): List<T>
+}
+
+class ImmutableQueueImpl<T>(private val values: List<T> = emptyList()) : ImmutableQueue<T> {
+
+    override fun queue(element: T): ImmutableQueueImpl<T> {
+        return ImmutableQueueImpl(this.values + element)
     }
 
-    fun dequeue(): ImmutableQueue<T> {
-        if(this.values.isEmpty()) throw UnsupportedOperationException("queue size is empty")
-        return ImmutableQueue(values.dropLast(1))
+    override fun dequeue(): ImmutableQueue<T> {
+        if (this.values.isEmpty()) throw UnsupportedOperationException("queue size is empty")
+        return ImmutableQueueImpl(values.dropLast(1))
     }
 
-    fun getElements(): List<T>{
+    override fun getElements(): List<T> {
         return values
     }
+}
+
+fun main() {
+
+    val queue = ImmutableQueueImpl<Int>()
+
+    val queue1 = queue.queue(1)
+    val queue2 = queue1.queue(2)
+    val queue3 = queue2.queue(3)
+
+    val queue4 = queue3.dequeue()
+
+    println(queue4.getElements())
 }
