@@ -1,4 +1,4 @@
-package pattern
+package pattern.algorithm
 
 fun main(args: Array<String>) {
 

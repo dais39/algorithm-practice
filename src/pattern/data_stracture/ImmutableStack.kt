@@ -1,4 +1,4 @@
-package pattern
+package pattern.data_stracture
 
 interface ImmutableStack<T> {
 

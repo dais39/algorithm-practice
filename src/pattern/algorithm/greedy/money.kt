@@ -1,4 +1,4 @@
-package pattern.greedy
+package pattern.algorithm.greedy
 
 /**
  * 蟻本 P42 硬貨の問題
