@@ -13,7 +13,7 @@ fun quickSort(array: Array<Int>): Array<Int> {
         while (array[left] < pivot) left++
         while (array[right] > pivot) right--
 
-        if(left <= right){
+        if (left <= right) {
             val temp = array[left]
             array[left] = array[right]
             array[right] = temp
@@ -40,7 +40,7 @@ fun quickSort(array: Array<Int>): Array<Int> {
 
 fun main() {
 
-    val array = arrayOf(2, 5, 3, 2, 7, 3, 1)
+    val array = readLine()!!.split(" ").map { it.toInt() }.toTypedArray()
 
     val sortedArray = quickSort(array)
 
