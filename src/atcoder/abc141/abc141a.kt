@@ -1,4 +1,4 @@
-package abc141
+package atcoder.abc141
 
 fun main(args: Array<String>) {
 
