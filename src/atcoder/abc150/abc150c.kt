@@ -1,8 +1,5 @@
 package atcoder.abc150
 
-import com.intellij.platform.createNewProjectFrame
-import kotlin.math.abs
-
 var permList = mutableListOf<String>()
 
 fun main(args: Array<String>) {
@@ -19,7 +16,7 @@ fun main(args: Array<String>) {
     println(Math.abs(a - b))
 }
 
-fun perm(n: Int){
+fun perm(n: Int) {
     val c = (1..n).toList()
     val p = emptyList<Int>()
     perm(c, p)
