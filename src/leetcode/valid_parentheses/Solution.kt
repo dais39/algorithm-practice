@@ -7,36 +7,21 @@ class Solution {
     fun isValid(s: String): Boolean {
 
         val stack = Stack<Char>()
+        val map = mapOf(')' to '(', '}' to '{', ']' to '[')
 
-        if(s.isEmpty()) return false
+        if(s.isEmpty()) return true
         if (listOf(')', '}', ']').contains(s.first())) return false
 
         s.forEach {
-            when (it) {
-                ')' -> {
-                    val c = stack.pop()
-                    if (c != '(') {
-                        stack.push(c)
-                        return false
-                    }
+            if (map.containsKey(it)) {
+                if (stack.empty()) return false
+                val c = stack.pop()
+                if (c != map[it]) {
+                    stack.push(c)
+                    return false
                 }
-                '}' -> {
-                    val c = stack.pop()
-                    if (c != '{') {
-                        stack.push(c)
-                        return false
-                    }
-                }
-                ']' -> {
-                    val c = stack.pop()
-                    if (c != '[') {
-                        stack.push(c)
-                        return false
-                    }
-                }
-                else -> {
-                    stack.push(it)
-                }
+            } else {
+                stack.push(it)
             }
         }
 
