@@ -1,4 +1,4 @@
-package leetcode.kth_largest_element
+package leetcode.problems.kth_largest_element
 
 import java.util.*
 

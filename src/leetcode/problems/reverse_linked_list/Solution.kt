@@ -1,4 +1,4 @@
-package leetcode.reverse_linked_list
+package leetcode.problems.reverse_linked_list
 
 class Solution {
     fun reverseList(head: ListNode?): ListNode? {

@@ -1,4 +1,4 @@
-package leetcode.valid_parentheses
+package leetcode.problems.valid_parentheses
 
 import java.util.*
 

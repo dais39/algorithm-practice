@@ -1,4 +1,4 @@
-package leetcode.valid_parentheses
+package leetcode.problems.valid_parentheses
 
 fun main(args: Array<String>) {
 
