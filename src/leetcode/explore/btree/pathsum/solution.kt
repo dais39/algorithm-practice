@@ -1,5 +1,7 @@
 package leetcode.explore.btree.pathsum
 
+import leetcode.explore.btree.TreeNode
+
 class Solution {
     fun hasPathSum(root: TreeNode?, sum: Int): Boolean {
         if(root == null) return false
@@ -14,12 +16,6 @@ class Solution {
         if(node.right == null) return _hasPathSum(node.left!!, sum - node.`val`)
         return _hasPathSum(node.left!!, sum - node.`val`) || _hasPathSum(node.right!!, sum - node.`val`)
     }
-}
-
-class TreeNode(val `val`: Int){
-
-    var left: TreeNode? = null
-    var right: TreeNode? = null
 }
 
 fun main() {
