@@ -1,5 +1,6 @@
 package leetcode.explore.btree.depth
 
+import leetcode.explore.btree.TreeNode
 import kotlin.math.max
 
 class Solution {
@@ -26,12 +27,6 @@ class Solution {
 
         return Math.max(leftDepth, rightDepth)
     }
-}
-
-class TreeNode(val `val`: Int) {
-
-    var left: TreeNode? = null
-    var right: TreeNode? = null
 }
 
 fun main() {

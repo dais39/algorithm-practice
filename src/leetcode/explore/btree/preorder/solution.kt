@@ -1,5 +1,7 @@
 package leetcode.explore.btree.preorder
 
+import leetcode.explore.btree.TreeNode
+
 class Solution {
 
     fun preorderTraversal(root: TreeNode?): List<Int> {
@@ -19,12 +21,6 @@ class Solution {
 
         return pre + lefts + rights
     }
-}
-
-class TreeNode(val `val`: Int) {
-
-    var left: TreeNode? = null
-    var right: TreeNode? = null
 }
 
 fun main() {

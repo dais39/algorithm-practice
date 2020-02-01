@@ -1,5 +1,7 @@
 package leetcode.explore.btree.inorder
 
+import leetcode.explore.btree.TreeNode
+
 class Solution {
 
     fun postorderTraversal(root: TreeNode?): List<Int> {
@@ -19,12 +21,6 @@ class Solution {
 
         return lefts + rights + postOrders
     }
-}
-
-class TreeNode(val `val`: Int) {
-
-    var left: TreeNode? = null
-    var right: TreeNode? = null
 }
 
 fun main() {
