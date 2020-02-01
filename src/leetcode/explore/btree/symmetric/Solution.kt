@@ -1,7 +1,5 @@
 package leetcode.explore.btree.symmetric
 
-import com.sun.source.tree.Tree
-
 class Solution {
     fun isSymmetric(root: TreeNode?): Boolean {
         return isMirror(root, root)
